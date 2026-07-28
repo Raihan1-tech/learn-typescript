@@ -14,3 +14,11 @@
  * 2. Store the participant data in a single collection.
  * 3. Display the participant data using console.log.
  */
+
+const bootcamp :{ studentid:string;name:string;age:number;paid:boolean;}[]=[
+{studentid:`ST001`,name:`ahmad jauzi`,age:16,paid:true},
+{studentid:`ST002`,name:`siti nurhaliza`,age:17,paid:false},
+{studentid:`ST003`,name:`budi santoso`,age:16,paid:true}
+]
+
+console.log(bootcamp)
