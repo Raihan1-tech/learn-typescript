@@ -21,3 +21,17 @@
  * - Final payment
  * - Whether the guest is eligible for free breakfast
  */
+
+const price:number=650000;
+const nights:number=4;
+const Service:number=120000;
+const Tax:number=0.11;
+const vip:boolean=true;
+const member:number=0.12;
+const breakfast:boolean=nights>3&&vip==true?true:false;
+
+console.log("subtotal ",price*nights)
+console.log("discount ",(price*nights)*member)
+console.log("tax ",((price * nights) - (price*nights)*member+Service) * Tax)
+console.log("final payment ",price*nights-(price*nights)*member+((price * nights) - (price*nights)*member+Service) * Tax)
+console.log("free breakfast? ",breakfast)

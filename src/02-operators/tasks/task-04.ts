@@ -22,3 +22,17 @@
  *  - Calculate the final payment.
 
  */
+
+const Keyboard :number=850000;
+const Keyboardnumber :number=1;
+const mouse :number=275000;
+const mousenumber :number=2;
+const mousepad :number=120000;
+const mousepadnumber :number=1;
+const total :number=Keyboard+(mouse*2)+mousepad;
+const discount:number=total>1000000?0.1:0;
+
+console.log("subtotal ",total)
+console.log("total purchased ",Keyboardnumber+mousenumber+mousepadnumber)
+console.log("discount? ",discount)
+console.log("final payment ",total*discount)

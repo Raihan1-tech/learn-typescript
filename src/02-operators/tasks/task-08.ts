@@ -24,3 +24,18 @@
  * - Final bill
  * - Green Energy Program eligibility
  */
+
+const premeter:number=25640;
+const nowmeter:number=25892;
+const electricityprice:number=1650;
+const solarpanel:boolean=true;
+const savingmode:boolean=false;
+const discount1: number = savingmode ? 0.05 : 1;
+const discount2: number = solarpanel ? 0.2 : 1;
+const energyconsume:number=nowmeter-premeter;
+const greenenergy:boolean=solarpanel==true&&energyconsume<300&&savingmode;
+
+console.log("energy consumption ",energyconsume)
+console.log("price ",energyconsume*electricityprice)
+console.log("final price ",energyconsume*electricityprice*discount1 *discount2)
+console.log("green energy?  ",greenenergy)

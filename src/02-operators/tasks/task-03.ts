@@ -17,3 +17,15 @@
  * - Bonus
  * - Final salary
  */
+
+import { BoundedChannelScope } from "diagnostics_channel";
+
+const salary:number=5000000;
+const overtimehours:number=12;
+const overtimerate:number=50000;
+const overtimepay:number=overtimehours*overtimerate;
+const bonus:number=overtimehours>10 ? 300000 : 0;
+
+console.log("overtime pay : ",overtimepay)
+console.log("bonus : ",bonus)
+console.log("final : ",overtimepay+bonus+salary)

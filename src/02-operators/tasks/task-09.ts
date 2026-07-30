@@ -34,3 +34,23 @@
  * - Free shipping eligibility
 
  */
+
+const Keyboard:number=850000;
+const Mouse:number=275000;
+const monitor:number=420000;
+const Voucher:number=100000;
+const member:boolean=true;
+const membership:number=0.1;
+const tax:number=0.11;
+const total:number=Keyboard+(Mouse*2)+monitor;
+const final:number=total+(total*tax)-Voucher-(total*membership)
+const point:number=+ ((final-(total*tax))/50000);
+
+console.log("subtotal ",total)
+console.log("membership discount ",total*membership)
+console.log("voucher deduction ",total-Voucher)
+console.log("before tax ",final-(total*tax))
+console.log("tax ",total*tax)
+console.log("final payment ",final)
+console.log("reward points ",point)
+console.log("free shipping? ",member||final-(total*tax)>1500000)

@@ -33,3 +33,16 @@
  * - Calculate the remaining scholarship budget.
  * - Display whether the student is accepted.
  */
+
+const name :string="alya putri"
+const GPA :number=3.89;
+const Familyincome:number=4200000;
+const competitionscount:number=4;
+const disciplinaryrecord:boolean=false;
+const documents:boolean=true;
+const scholarship:number=12000000;
+const scholarshipbudget:number=500000000;
+
+console.log("accecpt? ",GPA>3.75&&Familyincome<5000000&&competitionscount>=3&&disciplinaryrecord==false&&documents==true)
+console.log("scholarship ",scholarship)
+console.log("remain budget ",scholarshipbudget-scholarship)

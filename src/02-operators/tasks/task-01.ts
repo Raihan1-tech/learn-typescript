@@ -14,3 +14,11 @@
  *  - Final payment
  * 2. Display the calculation results.
  */
+const friedrice :number=18000;
+const water :number=5000;
+const council:boolean=true;
+const discount:number=council?10000:0;
+console.log("price of fried rice",friedrice*3)
+console.log("price of water ",water*2)
+console.log("grand total ",(friedrice*3)+(water*2))
+console.log("final payment",(friedrice*3)+(water*2)-discount)
