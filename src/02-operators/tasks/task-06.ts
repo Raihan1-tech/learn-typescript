@@ -17,7 +17,7 @@
 const charges:number=8000;
 const playingtimehours:number=7;
 const playingtimeminute:number=35;
-const discount:number=playingtimehours>5?0.15:1;
+const discount:number=playingtimehours>5?0.15:0;
 
 console.log("total play in minutes :",playingtimehours*60+playingtimeminute)
 console.log("remain minutes :",60-playingtimeminute)
