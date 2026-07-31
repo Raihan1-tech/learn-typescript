@@ -18,3 +18,16 @@ const attendances = [
   { name: "Gita", present: true },
   { name: "Hana", present: false }
 ];
+
+for(let i=0;i<=attendances.length;i++){
+  if(attendances[i].present==true){
+    for(let a=0;;a++){
+      console.log("presents student ",a);
+    }
+  }else{
+    for(let s=0;;s++){
+      console.log("absent student ",s);
+      console.log("name of absent student ",attendances.name);
+    }
+  }
+}

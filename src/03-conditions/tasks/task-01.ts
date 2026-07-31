@@ -20,3 +20,16 @@
  * will be display "Congratulations! You are eligible to graduate.", 
  * otherwise display "You are not eligible to graduate."
  */
+
+const Name:string="alya putri";
+const Final:number=82;
+const Attendance:number=94;
+const paid:boolean=true;
+
+console.log("nadia putri");
+
+if (Final>=75&&Attendance>=90&&paid){
+    console.log("Congratulations! You are eligible to graduate.");
+}else{
+    console.log("You are not eligible to graduate");   
+}

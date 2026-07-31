@@ -14,3 +14,14 @@
  * 3. Display the evaluation result. If eligible will display "Bonus Approved", 
  * otherwise display "Bonus not approved"
  */
+
+const Name:string="dimas pratama";
+const score:number=78;
+
+if(score>=80){
+    console.log("bonus approved");
+    const bonus:boolean=true;
+}else{
+    console.log("bonus not approved");
+    const bonus:boolean=false;
+}

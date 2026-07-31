@@ -30,3 +30,20 @@
  * 2. Implement both screening stages.
  * 3. Display the loan decision.
  */
+
+const applicant:string="andi wijaya";
+const income:number=10000000;
+const Credit:number=725;
+const debt:number=2500000;
+const employee:boolean=true;
+
+console.log("mr/mrs ",applicant);
+if(income>8000000&&Credit>700){
+    if(debt<income*0.3&&employee){
+        console.log("loan approved");
+    }else{
+        console.log("manual review");
+    }
+}else{
+    console.log("loan rejected");
+}

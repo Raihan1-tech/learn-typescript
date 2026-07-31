@@ -22,3 +22,29 @@
  * 2. Implement the logic using nested if statements.
  * 3. Display the reservation result.
  */
+
+const Name:string="nadia putri"
+const premium:boolean=true;
+const room:boolean=false;
+
+if(premium){
+    console.log("you receive a free room upgrade");
+    
+}else{
+    console.log("you receive the reserved room only");
+    
+}
+if(room){
+    console.log("thanks for the service");
+    
+}else{
+    console.log("room is not avaible but,");
+    
+    if(premium){
+        console.log("you are at priority waiting list");
+        
+    }else{
+        console.log("you can wait");
+        
+    }
+}
