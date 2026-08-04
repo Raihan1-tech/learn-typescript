@@ -21,3 +21,20 @@ const orders = [
   { id: "ORD005", paid: false, stockAvailable: false },
   { id: "ORD006", paid: true, stockAvailable: true }
 ];
+
+let ready:number=0
+let unpaid:number=0
+let waiting:number=0
+
+for(let i=0;i <orders.length;i++){
+  if(orders[i].paid&& orders[i].stockAvailable){
+    ready++
+  }else if(!orders[i].paid&&orders[i].stockAvailable){
+    unpaid++
+  }else{
+    waiting++
+  }
+}
+console.log("ready to go : ",ready);
+console.log("unpaid : ",unpaid);
+console.log("waiting for stock : ",waiting);

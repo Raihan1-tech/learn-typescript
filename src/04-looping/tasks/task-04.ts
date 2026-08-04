@@ -25,3 +25,21 @@
  */
 
 const sales = [125000,350000,78000,910000,150000,420000,275000,99000,640000,18000]
+
+const maxRevenue: number = Math.max(...sales)
+const minRevenue: number = Math.min(...sales)
+let totalRevenue: number = 0
+let numberOfTransaction: number = 0
+
+for(let i = 0; i <= 9; i++){
+    totalRevenue += sales[i]
+    if(sales[i] > 300000){
+        numberOfTransaction++
+    }
+}
+
+console.log("Total Sales Revenue: ",totalRevenue)
+console.log("Highest Revenue: ",maxRevenue)
+console.log("Lowest Revenue: ",minRevenue)
+console.log("Number of Transaction worth than Rp300.000: ",numberOfTransaction)
+console.log("Average Transaction Revenue: ",totalRevenue / sales.length)
