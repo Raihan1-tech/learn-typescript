@@ -21,3 +21,11 @@
  * 3. Display the bonus result inside the function.
  * 4. Call the function for every employee.
  */
+
+function showBonusStatus(employee:string,performance:number){
+    return performance >=85 ? `${employee}bonusapproved`:`${employee}bonusnotapproved`;
+}
+
+console.log("name:",showBonusStatus("john cena ",92));
+console.log("name:",showBonusStatus("undertaker ",76));
+console.log("name:",showBonusStatus("rey misterio ",88));
