@@ -18,12 +18,16 @@ function registerStudent(
 function showRegistrationMessage(name: string): void {
     console.log(`${name} successfully registered.`);
 }
+function showWelcomeMessage(name: string): void {
+  console.log("Welcome to our school",name,"!");
+}
 
 /** show registration message */
 registerStudent(`John Cena`, showRegistrationMessage)
+registerStudent("undertaker", showWelcomeMessage)
 
 /** 
  * TASK:
- * create another function that display welcomming message for entire student!
+ * create another function that display welcoming message for entire student!
  * Don't forget to implement callback function.
  * */

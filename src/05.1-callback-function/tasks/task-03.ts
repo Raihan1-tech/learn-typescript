@@ -21,3 +21,31 @@ const products = [
  * 
  * Instead of creating a separate loop for every operation, the developer creates a reusable processing function.
  */
+type products={name:string,price:number}
+
+function processproduct(arr:products[],
+    callback:(arr:products)=>void
+):void{
+    for (let i = 0; i < arr.length; i++) {
+        callback(arr[i])
+    }
+}
+function display(product: products): void {
+    console.log(product.name, "-", "Rp" + product.price);
+}
+function expensive(product: products): void {
+    if (product.price > 1000000) {
+        console.log("products :", product.name);
+    }
+}
+function discount(product: products): void {
+    if (product.price > 500000) {
+        console.log(
+            "products :", product.name,
+            "discount price :", "Rp" + product.price * 0.9
+        );
+    }
+}
+processproduct(products, display);
+processproduct(products, expensive);
+processproduct(products, discount);

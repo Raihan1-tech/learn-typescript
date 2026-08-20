@@ -35,3 +35,50 @@ const students = [
     { name: "Eka", score: 95, attendance: 82 },
     { name: "Fajar", score: 79, attendance: 97 }
 ];
+
+type student= {name: String,score: number,attendance: number}
+
+type STATUS = "PASS" | "FAIL" 
+type recommendation = "Excellent" | "Good" | "Improve Attendance" | "Improve Academic Performance"
+type STUDENT_SUCCESFULL= student & { Status: STATUS, Recommendation: recommendation}
+
+function StudentSuccesfull(selectedStudent: student): STUDENT_SUCCESFULL {
+    let status:STATUS = "FAIL"
+
+    if (selectedStudent.score >= 75 && selectedStudent.attendance >= 90) {
+        status = "PASS"
+    }
+
+    let recommendation: recommendation = "Improve Academic Performance"
+    if (selectedStudent.score >= 90 && selectedStudent.attendance >= 90) {
+        recommendation = "Excellent"
+    } else if (selectedStudent.score >= 75 && selectedStudent.attendance >= 90) {
+        recommendation = "Good"
+    } else if (selectedStudent.score >= 75 && selectedStudent.attendance < 90) {
+        recommendation = "Improve Attendance"
+    }
+    
+
+    return {
+        ...selectedStudent,
+        Status: status,
+        Recommendation: recommendation
+    }
+}
+
+function processStudents<T>(
+    arr: student[],
+    callback: (student: student) => T
+): T[] {
+    let result: T[] = []
+
+    for (let i = 0; i < arr.length; i++) {
+        result.push(callback(arr[i]))
+    }
+
+    return result
+}
+
+const studentAcademicInfo = processStudents(students, StudentSuccesfull)
+
+console.log(studentAcademicInfo)
